@@ -1,0 +1,22 @@
+{
+  "name": "messenger-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddylau328/messenger-exercise.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eddylau328/messenger-exercise/issues"
+  },
+  "homepage": "https://github.com/eddylau328/messenger-exercise#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
