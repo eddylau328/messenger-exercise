@@ -1,5 +1,7 @@
 // import express library
 const express = require('express');
+// import path library
+const path = require('path');
 
 // import the local storage 
 const LocalStorage = require('./localstorage');
@@ -34,6 +36,12 @@ app.post('/message', (req, res) => {
 app.get('/message', (req, res) => {
   res.status(200).send(storage.getData());
 })
+
+// GET / - get website home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'web/index.html'));
+})
+
 
 // start server by listening to port 3000
 const port = 3000
