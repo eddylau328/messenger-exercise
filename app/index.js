@@ -42,6 +42,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'web/index.html'));
 })
 
+app.get('/index.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'web/index.js'));
+})
+
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, 'web/favicon.ico'));
+})
 
 // start server by listening to port 3000
 const port = 3000
