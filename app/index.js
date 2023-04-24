@@ -14,6 +14,12 @@ const storage = new LocalStorage()
 // setup middleware layer
 app.use(express.json());
 
+// prevent 304
+app.use(function(req, res, next) {
+  req.headers['if-none-match'] = 'no-match-for-this';
+  next();    
+});
+
 /*
   APIs setup
   
@@ -24,7 +30,7 @@ app.use(express.json());
 */
 
 // POST /message - create a message
-app.post('/message', (req, res) => {
+app.post('/message', async (req, res) => {
   if (!req.body.message || !req.body.sender) {
     res.status(400).send();
   }
@@ -41,12 +47,6 @@ app.get('/message', (req, res) => {
 app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "web/index.html"));
 });
-
-// GET / - get the home page js
-app.get('/index.js', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, "web/index.js"));
-});
-
 
 // start server by listening to port 3000
 const port = 3000
