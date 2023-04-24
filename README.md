@@ -24,25 +24,25 @@ The Backend should provide storing message and retrieving message
 
 ### Backend
 
-- [ ] create a server with 3 APIs
+- [x] create a server with 3 APIs
 
-  - [X] GET /message --> return list of message
-  - [X] POST /message --> create a message
-  - [ ] GET / --> return the home page (web)
+  - [x] GET /message --> return list of message
+  - [x] POST /message --> create a message
+  - [x] GET / --> return the home page (web)
 
-- [X] create two service functions
-  - [X] retrieving all the messages
-  - [X] append message to the list
+- [x] create two service functions
+  - [x] retrieving all the messages
+  - [x] append message to the list
 
 ### Frontend
 
-- [ ] Visual Representation
-  - [ ] create a message box for each message
-  - [ ] create a layout for all the messages
-- [ ] Data input
-  - [ ] create a input field for typing message
-  - [ ] create a send button for sending message
-- [ ] API Calling
-  - [ ] connect create message API
-  - [ ] connect retrieve message API
-  - [ ] update message list
+- [x] Visual Representation
+  - [x] create a message box for each message
+  - [X ] create a layout for all the messages
+- [x] Data input
+  - [x] create a input field for typing message
+  - [x] create a send button for sending message
+- [x] API Calling
+  - [x] connect create message API
+  - [x] connect retrieve message API
+  - [x] update message list
